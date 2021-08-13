@@ -1,30 +1,26 @@
 <script>
-	export let name;
+	//export let name;
+
+import DayContainer from "./components/DayContainer.svelte";
+import WeekContainer from "./components/WeekContainer.svelte";
+
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+<main>	
+	<DayContainer />
+	<WeekContainer />
 </main>
 
 <style>
 	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
+    width: 36rem;
+    height: 100vh;
+    max-height: 74rem;
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
+		display: grid;
+		grid-template-rows: 70% 30%;
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+		background-color: rgb(155, 150, 150);
+  }
+
 </style>
