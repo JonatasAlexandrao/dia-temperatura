@@ -9,6 +9,6 @@
 
 <style>
   div {
-    background-color: chocolate;
+    background-color: rgb(231, 231, 231);
   }
 </style>
