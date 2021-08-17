@@ -1,7 +1,19 @@
 :root {
   font-size: 10px;
 
-	--color-background-page: rgb(28, 28, 28);
+	--color-white: #f4f4f4;
+
+	--color-background-page: #1c1c1c;
+
+	/*madrugada*/
+	--color-background-dawn: linear-gradient(180deg, #1e2141 0%, #462e7d 40%, #ffe89f 100%); 
+	/*Manha*/
+	--color-background-morning: linear-gradient(180deg, #943ca1 0%, #c468a5 40%, #ffe89f 100%);
+	/*Tarde*/
+	--color-background-afternoon: linear-gradient(180deg, #462e7d 0%, #943ca1 40%, #c468a5 100%);
+	/*Noite*/
+	--color-background-night: linear-gradient(180deg, #1e2141 0%, #352d6e 40%, #462e7d 100%);
+
 }
 
 html, body {
@@ -10,13 +22,15 @@ html, body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
+
+	
 }
 
 body {
 	background-color: var(--color-background-page);
 	color: #333;
 	box-sizing: border-box;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: 'Quicksand', sans-serif;
 
 	display: flex;
 	justify-content: center;

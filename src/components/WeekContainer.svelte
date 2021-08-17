@@ -3,12 +3,12 @@
 </script>
 
 
-<div>
+<section>
   asd
-</div>
+</section>
 
 <style>
-  div {
-    background-color: rgb(231, 231, 231);
+  section {
+    background-color: var(--color-white);
   }
 </style>

@@ -2,17 +2,20 @@
 
 </script>
 
-<div class="day-container">
+<section class="day-container">
   <!-- <div class="detail">detail</div> -->
-  <div class="text">
-    <p>11:45</p>
-    <p>Amparo</p>
-    <p>28º</p>
+  <div class="info">
+    <small class="hour">11:45</small>
+    <p class="city">Amparo</p>
+    <strong class="temperature">28º</strong>
   </div>
+
+  <img class="bg-moon" src="img/moon.svg" alt="">
+  <img class="bg-stars" src="img/stars.svg" alt="">
   <img class="bg-sun" src="img/sun.svg" alt="sol">
   <img class="bg-mountains" src="img/mountains.svg" alt="montanhas">
   <img class="bg-detail" src="img/detail.svg" alt="detalhe">
-</div>
+</section>
 
 <style>
 
@@ -20,45 +23,64 @@
 
     position: relative;
 
-    /*background-color: brown;*/
-    /*display: grid;
-    grid-template: 
-    'text'
-    'sun'
-    'mountains'
-    'detail'
-    ;
-    align-content: end;*/
     background: rgb(148,60,161);
-
-    /*madrugada*/
-    /* background: linear-gradient(180deg, #1e2141 0%, #462e7d 40%, #ffe89f 100%); */
-
-    /*Manha*/
-    background: linear-gradient(180deg, rgba(148,60,161,1) 0%, rgba(196,104,165,1) 40%, rgba(255,232,159,1) 100%);
+     /*Manha*/
+    background-image: var(--color-background-morning);
 
     
   }
 
-  .text {
-    /*grid-area: text;*/
+  .info {
     text-align: center;
-    font-size: 3rem;
-    color: whitesmoke;
+    position: relative;
+
+    width: 100%;
+    height: 10rem;
+
+    margin-top: 3rem;
 
   }
 
-  .bg-sun {
-    /*grid-area: sun;*/
+  .hour, .city, .temperature {
+    color: var(--color-white);
+    font-weight: 500;
+  }
+  .info .hour {
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
 
+  .info .city {
+    font-size: 4.5rem;
+    line-height: 3rem;
+  }
+
+  .info .temperature {
+    font-size: 8rem;
+  }
+
+
+  .bg-moon {
     position: absolute;
-    width: 60%;
+    width: 20%;
+    top: 0;
+  }
+
+  .bg-stars {
+    position: absolute;
+    width: 100%;
+    opacity: 50%;
+    top: 0;
+  }
+
+  .bg-sun {
+    position: absolute;
+    width: 70%;
     bottom: 10rem;
     left: 10rem;
   }
 
   .bg-mountains {
-    /*grid-area: mountains;*/
     position: absolute;
     width: 100%;
     bottom: 0;
@@ -66,11 +88,10 @@
   }
 
   .bg-detail {
-    /*grid-area: detail;*/
     position: absolute;
-    width: 30px;
+    width: 3rem;
 
-    bottom: -40px;
+    bottom: -4.3rem;
     left: 6rem;
   }
   
