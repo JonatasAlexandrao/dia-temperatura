@@ -92,7 +92,9 @@
     width: 3rem;
 
     bottom: -4.3rem;
-    left: 6rem;
+    left: 14rem;
+
+    z-index: 9999;
   }
   
 </style>
