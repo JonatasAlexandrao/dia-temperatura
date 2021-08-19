@@ -10,11 +10,11 @@
     <strong class="temperature">28º</strong>
   </div>
 
-  <img class="bg-moon" src="img/moon.svg" alt="">
-  <img class="bg-stars" src="img/stars.svg" alt="">
-  <img class="bg-sun" src="img/sun.svg" alt="sol">
-  <img class="bg-mountains" src="img/mountains.svg" alt="montanhas">
-  <img class="bg-detail" src="img/detail.svg" alt="detalhe">
+  <img class="bg-moon" src="assets/img/moon.svg" alt="">
+  <img class="bg-stars" src="assets/img/stars.svg" alt="">
+  <img class="bg-sun" src="assets/img/sun.svg" alt="sol">
+  <img class="bg-mountains" src="assets/img/mountains.svg" alt="montanhas">
+  <img class="bg-detail" src="assets/img/detail.svg" alt="detalhe">
 </section>
 
 <style>
