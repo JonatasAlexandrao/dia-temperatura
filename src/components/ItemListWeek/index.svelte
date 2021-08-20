@@ -1,9 +1,22 @@
 <script> 
 
-fetch('https://jsonplaceholder.typicode.com/users')
-  .then(response => response.json())
-  .then(json => console.log(json))
+  let forecastsOfWeek = listForecast();
 
+	async function listForecast() {
+		const response = await fetch('https://my-json-server.typicode.com/JonatasAlexandrao/fake-api-teste/db');
+		const json = await response.json();
+    const list =  json.forecast
+
+    console.log(list[0])
+
+    return list[0]
+
+		/*if (response.ok) {
+			return list[0].day;
+		} else {
+			throw new Error(list);
+		}*/
+	}
 
 const day="Thursday"
 const temperature="28º"
@@ -13,15 +26,40 @@ const iconDescription="Dia Nublado"
 //console.log(temperatureListtt)
 //console.log('temperatureList')
 
+
+let forecastsOfWeekkk = [
+  { teste: '1'},
+  { teste: '2'},
+  { teste: '3'},
+  { teste: '4'},
+]
+
+forecastsOfWeekkk.forEach(element => {
+  console.log(element)
+});
+
 </script>
 
 <ul class="week-list">
 
-  <li class="item -today"> 
-    <span class="item-day"> {day} </span> 
-    <span class="item-temperature">{temperature}</span>
-    <img class="item-icon" src="{icon}" alt="{iconDescription}">     
-  </li>
+  {#await forecastsOfWeek}
+	  <p>...waiting</p>
+  {:then list}
+    <li class="item -today"> 
+      <span class="item-day"> {list.day} </span> 
+      <span class="item-temperature">{list.temperature}</span>
+      <img class="item-icon" src="{list.climate}" alt="{list.climate}">     
+    </li>
+  {:catch error}
+	  <p style="color: red">{error.message}</p>
+  {/await}
+
+
+ 
+  
+
+  
+  
 
 
 
