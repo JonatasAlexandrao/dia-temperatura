@@ -1,10 +1,10 @@
 <script>
-  import ItemListWeek from "./ItemListWeek/index.svelte";
+  import WeekList from "./WeekList/index.svelte";
 </script>
 
 
 <section class="week-container">
-  <ItemListWeek/>
+  <WeekList/>
 
 </section>
 
