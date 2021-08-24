@@ -1,8 +1,8 @@
 <script></script>
 
 
-<img class="bg-moon" src="assets/img/moon.svg" alt="">
-<img class="bg-stars" src="assets/img/stars.svg" alt="">
+<img class="bg-moon" src="assets/img/moon.svg" alt="lua">
+<img class="bg-stars" src="assets/img/stars.svg" alt="estrelas">
 <img class="bg-sun" src="assets/img/sun.svg" alt="sol">
 <img class="bg-mountains" src="assets/img/mountains.svg" alt="montanhas">
 <img class="bg-detail" src="assets/img/detail.svg" alt="detalhe">
