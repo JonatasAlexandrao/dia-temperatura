@@ -1,14 +1,15 @@
 <script>
 
-  import { time } from "../../store"
+  export let time
 
   const city = 'Amparo'
   const temperature = '20º'
+  
 
 </script>
 
 <div class="info">
-  <small class="hour">{$time}</small>
+  <small class="hour">{time}</small>
   <p class="city">{city}</p>
   <strong class="temperature">{temperature}</strong>
 </div>
