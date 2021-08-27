@@ -1,26 +1,14 @@
 <script>
 
-  let clock = currentTime()
+  import { time } from "../../store"
+
   const city = 'Amparo'
   const temperature = '20º'
-
-
-  function currentTime() {
-    const hours = new Date().getHours()
-    const minutes = new Date().getMinutes()
-
-    return `${hours}:${minutes}`
-  }
-
-  const updateClock = () => { clock = currentTime() }
-
-  setInterval(updateClock, 10000)
-
 
 </script>
 
 <div class="info">
-  <small class="hour">{clock}</small>
+  <small class="hour">{$time}</small>
   <p class="city">{city}</p>
   <strong class="temperature">{temperature}</strong>
 </div>

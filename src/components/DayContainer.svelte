@@ -2,10 +2,6 @@
   import DayInfo from "./DayInfo/index.svelte";
   import BackgroundInfo from "./BackgroundInfo/index.svelte";
 
- import { clock } from "../store.js"
-
- console.log(clock)
-
 
 </script>
 

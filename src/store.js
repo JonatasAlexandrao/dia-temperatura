@@ -1,13 +1,18 @@
 import { readable } from "svelte/store";
 
-/*export const clock = readable( function currentTime() {
-  const time = setInterval(() => {
-    const hours = new Date().getHours()
-    const minutes = new Date().getMinutes()
-  
-    return `${hours}:${minutes}`
-  }, 1000)
-  
-} )*/
+function currentTime() {
+  const hours = new Date().getHours()
+  const minutes = new Date().getMinutes()
 
-export const clock = '11'
+  return `${hours}:${minutes}`
+}
+
+export const time = readable( currentTime(), function (set) {
+
+  setInterval(() => { set(currentTime()); }, 1000)
+
+} );
+
+
+
+
