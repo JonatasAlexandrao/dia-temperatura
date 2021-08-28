@@ -4,33 +4,33 @@
   //import { time } from "../store.js"
 
   //======== Variaveis =====================
-  let time = currentTime()
-  //let dayPeriod = ''
+  let time = currentTime().time
+  let dayPeriod = currentTime().dayPeriod
   //----------------------------------------
 
   function checkPeriodDay(hour) {
 
     let dayPeriod = ''
     const dawn =        hour >= 1 && hour < 6
-    const morning =     hour >= 6 && hour < 12
-    const afternoon =   hour >= 12 && hour < 19
+    const morning =     hour >= 6 && hour < 13
+    const afternoon =   hour >= 13 && hour < 19
     const night =       hour >= 19 || hour === 0
 
     switch (true) {
       case dawn :
-        dayPeriod = '-dawn'
+        dayPeriod = 'dawn'
         break;
 
       case morning :
-        dayPeriod = '-morning'
+        dayPeriod = 'morning'
         break;
 
       case afternoon :
-        dayPeriod = '-afternoon'
+        dayPeriod = 'afternoon'
         break;
 
       case night :
-        dayPeriod = '-night'
+        dayPeriod = 'night'
         break;
 
       default:
@@ -39,7 +39,7 @@
     } 
 
     return dayPeriod
-}
+  }
 
 
   function currentTime() {
@@ -52,15 +52,15 @@
     return { dayPeriod, time }
   }
 
-  setInterval(() => { time = currentTime().time }, 1000)
+  setInterval(() => { time = currentTime().time }, 10000)
 
 </script>
 
-<section class="day-container { currentTime().dayPeriod }">
+<section class="day-container { '-'+currentTime().dayPeriod }">
   
   <DayInfo time={time} />
 
-  <BackgroundInfo />
+  <BackgroundInfo dayPeriod={dayPeriod} />
   
 </section>
 
@@ -69,9 +69,9 @@
   .day-container {
 
     position: relative;
-
     background: rgb(148,60,161);
 
+    overflow: hidden;
   }
 
   .day-container.-dawn {

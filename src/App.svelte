@@ -8,6 +8,9 @@ import WeekContainer from "./components/WeekContainer.svelte";
 
 <main>	
 	<DayContainer />
+	<div class="breath">
+		<img class="bg-detail" src="assets/img/detail.svg" alt="detalhe">
+	</div>
 	<WeekContainer />
 </main>
 
@@ -18,9 +21,25 @@ import WeekContainer from "./components/WeekContainer.svelte";
     max-height: 74rem;
 
 		display: grid;
-		grid-template-rows: 70% 30%;
+		grid-template-rows: 67% 3% 30%;
 
 		background-color: rgb(155, 150, 150);
+  }
+
+	.breath {
+		position: relative;
+		background-color: #000;
+	}
+
+	
+  .breath .bg-detail {
+    position: absolute;
+    width: 3rem;
+
+    bottom: -4.3rem;
+    left: 14rem;
+
+    z-index: 9999;
   }
 
 </style>

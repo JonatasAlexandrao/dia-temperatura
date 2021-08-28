@@ -1,11 +1,19 @@
-<script></script>
+<script>
+  export let dayPeriod
+  const nocturnePeriod = dayPeriod === 'night' || dayPeriod === 'dawn'
+
+</script>
 
 
-<img class="bg-moon" src="assets/img/moon.svg" alt="lua">
-<img class="bg-stars" src="assets/img/stars.svg" alt="estrelas">
-<img class="bg-sun" src="assets/img/sun.svg" alt="sol">
+{#if nocturnePeriod}
+  <img class="bg-moon" src="assets/img/moon.svg" alt="lua">
+  <img class="bg-stars" src="assets/img/stars.svg" alt="estrelas">
+{:else}
+  <img class="bg-sun" src="assets/img/sun.svg" alt="sol">
+{/if}
+
 <img class="bg-mountains" src="assets/img/mountains.svg" alt="montanhas">
-<img class="bg-detail" src="assets/img/detail.svg" alt="detalhe">
+
 
 <style>
 
@@ -25,6 +33,11 @@
   .bg-sun {
     position: absolute;
     width: 70%;
+
+    /*manha*/
+    /*bottom: 30rem;
+    left: -10rem;*/
+    /*tarde*/
     bottom: 10rem;
     left: 10rem;
   }
@@ -34,16 +47,6 @@
     width: 100%;
     bottom: 0;
     left: 0;
-  }
-
-  .bg-detail {
-    position: absolute;
-    width: 3rem;
-
-    bottom: -4.3rem;
-    left: 14rem;
-
-    z-index: 9999;
   }
 
 </style>
