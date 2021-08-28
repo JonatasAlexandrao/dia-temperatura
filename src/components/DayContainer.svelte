@@ -45,6 +45,8 @@
   function currentTime() {
     const hour = new Date().getHours()
     const minutes = new Date().getMinutes()
+    
+    console.log(minutes.toString().length)
 
     const dayPeriod = checkPeriodDay(hour)
     const time = `${hour}:${minutes}`
