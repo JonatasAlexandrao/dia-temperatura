@@ -4,11 +4,13 @@
   //import { time } from "../store.js"
 
   //======== Variaveis =====================
-  let time = currentTime().time
-  let dayPeriod = currentTime().dayPeriod
+  let time = currentTime()
+  let dayPeriod = checkPeriodDay()
   //----------------------------------------
 
-  function checkPeriodDay(hour) {
+  function checkPeriodDay() {
+
+    const hour = new Date().getHours()
 
     let dayPeriod = ''
     const dawn =        hour >= 1 && hour < 6
@@ -41,24 +43,31 @@
     return dayPeriod
   }
 
-
   function currentTime() {
-    const hour = new Date().getHours()
-    const minutes = new Date().getMinutes()
-    
-    console.log(minutes.toString().length)
+    let hour = zeroLeft(new Date().getHours())
+    let minutes = zeroLeft(new Date().getMinutes())
 
-    const dayPeriod = checkPeriodDay(hour)
+    function zeroLeft(time) {
+      if(time.toString().length < 2) 
+        time = `0${time}`
+    
+      return time
+    }
+
     const time = `${hour}:${minutes}`
 
-    return { dayPeriod, time }
+    return time
   }
 
-  setInterval(() => { time = currentTime().time }, 10000)
+  setInterval(() => { 
+    time = currentTime()
+    dayPeriod = checkPeriodDay()
+
+  }, 10000)
 
 </script>
 
-<section class="day-container { '-'+currentTime().dayPeriod }">
+<section class="day-container { '-'+dayPeriod }">
   
   <DayInfo time={time} />
 
