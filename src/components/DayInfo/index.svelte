@@ -1,10 +1,8 @@
 <script>
 
   export let time
-
-  const city = 'Amparo'
-  const temperature = '20º'
-  
+  export let city
+  export let temperature
 
 </script>
 

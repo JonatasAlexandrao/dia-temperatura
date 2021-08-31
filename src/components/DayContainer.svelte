@@ -69,7 +69,7 @@
 
 <section class="day-container { '-'+dayPeriod }">
   
-  <DayInfo time={time} />
+  <DayInfo time={time} city="Amparo" temperature="21º" />
 
   <BackgroundInfo dayPeriod={dayPeriod} />
   
