@@ -1,7 +1,9 @@
 <script>
   import DayInfo from "./DayInfo/index.svelte";
   import BackgroundInfo from "./BackgroundInfo/index.svelte";
+  import { activeSettings } from '../store.js'
   //import { time } from "../store.js"
+ 
 
   //======== Variaveis =====================
   let time = currentTime()
@@ -65,10 +67,18 @@
 
   }, 10000)
 
+  function ActiveSettings() {
+    activeSettings.set(true)
+    console.log('click')
+  }
+
 </script>
+
 
 <section class="day-container { '-'+dayPeriod }">
   
+  <img class="icons-settings" src="./assets/icons/settings.svg" alt="settings" on:click="{ActiveSettings}" >
+
   <DayInfo time={time} city="Amparo" temperature="21º" />
 
   <BackgroundInfo dayPeriod={dayPeriod} />
@@ -96,6 +106,23 @@
   }
   .day-container.-night {
     background-image: var(--color-background-night);
+  }
+
+
+  .icons-settings {
+    position: absolute;
+    right: 0;
+    margin: 1rem 1rem 0 0;
+
+    cursor: pointer;
+    opacity: .2;
+
+    transition: transform 1s;
+  }
+
+  .icons-settings:hover {
+    opacity: 1;
+    transform: rotate(90deg) translateZ(0);
   }
 
 </style>

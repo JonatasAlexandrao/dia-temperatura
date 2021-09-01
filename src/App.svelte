@@ -3,10 +3,12 @@
 
 import DayContainer from "./components/DayContainer.svelte";
 import WeekContainer from "./components/WeekContainer.svelte";
+import MenuSettings from "./components/MenuSettings/index.svelte"
 
 </script>
 
 <main>	
+	<MenuSettings />
 	<DayContainer />
 	<div class="breath">
 		<img class="bg-detail" src="assets/img/detail.svg" alt="detalhe">
@@ -16,6 +18,7 @@ import WeekContainer from "./components/WeekContainer.svelte";
 
 <style>
 	main {
+		position: relative;
     width: 36rem;
     height: 100vh;
     max-height: 74rem;
@@ -39,7 +42,7 @@ import WeekContainer from "./components/WeekContainer.svelte";
     bottom: -4.3rem;
     left: 14rem;
 
-    z-index: 9999;
+    z-index: 8888;
   }
 
 </style>
