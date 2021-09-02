@@ -69,7 +69,6 @@
 
   function ActiveSettings() {
     activeSettings.set(true)
-    console.log('click')
   }
 
 </script>
