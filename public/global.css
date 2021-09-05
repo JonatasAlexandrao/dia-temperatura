@@ -46,7 +46,7 @@ a { text-decoration: none; }
 
 a:hover { text-decoration: underline; }
 
-button { outline: none; }
+/* button { outline: none; } */
 
 .sr-only { /* esconde textos e itens de uso semantico para leitores de tela */
   position: absolute;

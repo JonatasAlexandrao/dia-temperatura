@@ -24,11 +24,14 @@
 
     margin-top: 3rem;
 
+    
   }
 
   .hour, .city, .temperature {
     color: var(--color-white);
     font-weight: 500;
+
+    pointer-events: none;  
   }
   .info .hour {
     font-size: 2.5rem;

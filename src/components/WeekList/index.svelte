@@ -147,16 +147,17 @@
 }
 
 .week-list .item:not(:first-child) {
-opacity: 50%;
+  opacity: 50%;
 }
 
 .item .item-icon {
-font-size: 1.5rem;
-text-align: center;
-justify-self: center;
+  font-size: 1.5rem;
+  text-align: center;
+  justify-self: center;
 
-width: 70%;
-opacity: .9;
+  width: 70%;
+  opacity: .9;
+  pointer-events: none;
 }
 
 </style>

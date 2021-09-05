@@ -31,18 +31,6 @@
 
   listForecast()
 
- 
-
-
-
-
-
-
-
-
-
-
-
 
 
 */
@@ -51,8 +39,7 @@
 
 
 <section class="week-container">
-  <WeekList/>
-
+  <WeekList />
 </section>
 
 <style>
